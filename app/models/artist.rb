@@ -1,7 +1,7 @@
 class Artist < ActiveRecord::Base
 
-  def similar_artists(artist)
-    Echowrap.artist_similar(id: artist.id, results: 20)
+  def self.similar_artists(artist)
+    Echowrap.artist_similar(name: artist, results: 100)
   end
 
 end

@@ -1,11 +1,11 @@
 class ArtistsController < ApplicationController
 
   def index
-    @artists
+
   end
 
   def show
-    @artist
+    @artists = Artist.similar_artists(params[:id])
   end
 
 end

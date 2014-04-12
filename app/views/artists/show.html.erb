@@ -1,0 +1,9 @@
+<h1>Concerts near you</h1>
+
+<div>
+  <ul>
+    <% @artists.each do |artist| %>
+      <li><%= artist.name %></li>
+    <% end %>
+  </ul>
+</div>
