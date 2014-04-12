@@ -1,0 +1,29 @@
+<h1>ConcertMatchear</h1>
+
+<div class='row'>
+  <h3>Select an Artist</h3>
+</div>
+
+<div class='row'>
+  <input id='user_input' type='text' placeholder='Artist'>
+  <div id='submit'><a href='#' class='button'>Submit</a></div>
+</div>
+
+<script>
+  var str = '';
+
+  $(document).ready(function() {
+    $('#user_input').change(function() {
+      $('select option:selected').each(function() {
+        str += $(this).val();
+      });
+    });
+  });
+
+  $(document).ready(function() {
+    $('#submit').click(function() {
+      var artist = $('#user_input').val();
+      window.location.assign('/artists/' + artist);
+    });
+  });
+</script>
